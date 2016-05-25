@@ -16,7 +16,7 @@ describe('http.Server e2e', () => {
         agent.setRecorder((span) => {
             records.push(span)
         })
-        wrapper.wrap(agent)
+        wrapper.wrap(agent, http)
         server = http.createServer((request, response) => {
             response.end('hello world')
         })

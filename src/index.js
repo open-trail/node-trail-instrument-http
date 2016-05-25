@@ -1,10 +1,10 @@
 'use strict'
 
-import http from 'http'
 import shimmer from 'trail-shimmer'
 
 module.exports = {
-    wrap(agent) {
+    target: 'http',
+    wrap(agent, http) {
         agent.bindEmitter(http.Server.prototype)
 
         shimmer.wrap(http.Server.prototype, 'http.Server.prototype', ['on', 'addListener'], function (addListener) { // eslint-disable-line

@@ -17,7 +17,7 @@ describe('http.request e2e', () => {
             records.push(span)
         })
         remote.listen(HTTP_PORT)
-        wrapper.wrap(agent)
+        wrapper.wrap(agent, http)
     })
 
     afterEach(() => {
