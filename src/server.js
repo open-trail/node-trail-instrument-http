@@ -1,14 +1,12 @@
 'use strict'
 
-import os from 'os'
-
 function wrapListener(listener, agent) {
     return function (request, response) {
         let requestUrl = request.url.split('?')[0]
         let headers = request.headers
 
         let span = agent.start(requestUrl, agent.FORMAT_TEXT_MAP, headers)
-        span.setTag('host', os.hostname())
+        span.setTag('host', headers.host)
         span.setTag('protocol', 'http')
 
         response.once('finish', function instrumentedFinish() {
