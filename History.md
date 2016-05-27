@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/cattail/node-trail-instrument-http/compare/v1.0.0...v1.0.1) (2016-05-27)
+
+
+### Bug Fixes
+
+* keep request send and server receive consistant ([91d60fe](https://github.com/cattail/node-trail-instrument-http/commit/91d60fe))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/cattail/node-trail-instrument-http/compare/v0.1.1...v1.0.0) (2016-05-25)
 
