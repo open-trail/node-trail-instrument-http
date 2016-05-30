@@ -11,22 +11,6 @@
     var agent = require('trail-agent')
     agent.instrument(['http'])
 
-## Development
-
-Install global dependencies
-
-    npm install -g commitizen cz-conventional-changelog trash-cli conventional-recommended-bump conventional-changelog-cli conventional-github-releaser conventional-commits-detector json
-
-Setup environment variable `CONVENTIONAL_GITHUB_RELEASER_TOKEN`
-
-Commit changes (provided by commitizen)
-
-    git cz
-
-Publish module
-
-    npm run np
-
 ## License
 
 MIT

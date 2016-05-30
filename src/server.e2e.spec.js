@@ -1,8 +1,10 @@
 'use strict'
 
 import http from 'http'
+
 import {expect} from 'chai'
 import agent from 'trail-agent'
+
 import wrapper from '.'
 
 describe('http.Server e2e', () => {

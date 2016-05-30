@@ -1,9 +1,11 @@
 'use strict'
 
 import http from 'http'
+
 import {expect} from 'chai'
 import cls from 'continuation-local-storage'
 import agent from 'trail-agent'
+
 import wrapper from '.'
 
 describe('http.request e2e', () => {
@@ -38,7 +40,7 @@ describe('http.request e2e', () => {
     })
 
     it('should record request as part of service call', (done) => {
-        let ns = cls.getNamespace('trail')
+        let ns = cls.getNamespace(agent.NAMESPACE)
         ns.run(() => {
             let path = '/session-client-request'
             let sessionSpan = agent.start(OPERATION_NAME)

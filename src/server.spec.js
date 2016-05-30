@@ -1,13 +1,14 @@
 'use strict'
 
 import {expect} from 'chai'
-import sinon from 'sinon'
 import cls from 'continuation-local-storage'
+import sinon from 'sinon'
 import agent from 'trail-agent'
+
 import wrapListener from './server'
 
 describe('http.Server wrap', () => {
-    let ns = cls.getNamespace('trail')
+    let ns = cls.getNamespace(agent.NAMESPACE)
     let sandbox
     let records
 

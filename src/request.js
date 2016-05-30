@@ -21,7 +21,7 @@ function wrapRequest(originalHttpRequest, agent) {
         requestParams.headers = requestParams.headers || {}
 
         let span = agent.fork(requestParams.path, agent.FORMAT_TEXT_MAP,
-                               requestParams.headers)
+                              requestParams.headers)
         span.setTag('host', requestParams.host || 'localhost')
         span.setTag('protocol', 'http')
 
