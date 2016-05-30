@@ -17,7 +17,7 @@ MIT
 
 [npm-image]: https://img.shields.io/npm/v/trail-instrument-http.svg?style=flat
 [npm-url]: https://npmjs.org/package/trail-instrument-http
-[travis-image]: https://img.shields.io/travis/CatTail/node-trail-instrument-http.svg?style=flat
-[travis-url]: https://travis-ci.org/CatTail/node-trail-instrument-http
-[coveralls-image]: https://img.shields.io/coveralls/CatTail/node-trail-instrument-http.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/CatTail/node-trail-instrument-http?branch=master
+[travis-image]: https://img.shields.io/travis/open-trail/node-trail-instrument-http.svg?style=flat
+[travis-url]: https://travis-ci.org/open-trail/node-trail-instrument-http
+[coveralls-image]: https://img.shields.io/coveralls/open-trail/node-trail-instrument-http.svg?style=flat
+[coveralls-url]: https://coveralls.io/r/open-trail/node-trail-instrument-http?branch=master

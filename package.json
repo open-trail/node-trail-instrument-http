@@ -1,7 +1,7 @@
 {
   "name": "trail-instrument-http",
   "description": "Instrument http core library for trail",
-  "repository": "CatTail/node-trail-instrument-http",
+  "repository": "open-trail/node-trail-instrument-http",
   "version": "1.0.2",
   "main": "dist/index.js",
   "keywords": [],
