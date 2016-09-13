@@ -1,3 +1,18 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/open-trail/node-trail-instrument-http/compare/v1.0.2...v1.1.0) (2016-09-13)
+
+
+### Bug Fixes
+
+* travis can't compile certain modules ([dcc8bc9](https://github.com/open-trail/node-trail-instrument-http/commit/dcc8bc9))
+
+
+### Features
+
+* add port for tags ([5d80501](https://github.com/open-trail/node-trail-instrument-http/commit/5d80501))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/open-trail/node-trail-instrument-http/compare/v1.0.1...v1.0.2) (2016-05-30)
 
