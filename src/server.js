@@ -2,11 +2,13 @@
 
 function wrapListener(listener, agent) {
     return function (request, response) {
-        let requestUrl = request.url.split('?')[0]
-        let headers = request.headers
+        const requestUrl = request.url.split('?')[0]
+        const headers = request.headers
 
-        let span = agent.start(requestUrl, agent.FORMAT_TEXT_MAP, headers)
-        span.setTag('host', headers.host)
+        const span = agent.start(requestUrl, agent.FORMAT_TEXT_MAP, headers)
+        const address = headers.host.split(':')
+        span.setTag('host', address[0])
+        span.setTag('port', address[1] || '80')
         span.setTag('protocol', 'http')
 
         response.once('finish', function instrumentedFinish() {

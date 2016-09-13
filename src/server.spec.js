@@ -15,6 +15,7 @@ describe('http.Server wrap', () => {
     beforeEach((done) => {
         ns.run(() => {
             records = []
+            agent.setSampler(() => true)
             agent.setRecorder((span) => {
                 records.push(span)
             })
@@ -31,7 +32,7 @@ describe('http.Server wrap', () => {
         sandbox.spy(agent, 'start')
 
         let listener = wrapListener(() => {}, agent)
-        listener({url: '/', headers: {}}, {once: () => {}})
+        listener({url: '/', headers: {host: 'localhost'}}, {once: () => {}})
 
         expect(agent.start).to.be.calledOnce
     })
@@ -43,6 +44,7 @@ describe('http.Server wrap', () => {
         let request = {
             headers: {
                 'user-agent': '007',
+                host: 'localhost',
             },
             url: '/',
         }

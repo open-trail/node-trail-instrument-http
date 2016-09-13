@@ -20,12 +20,13 @@ function wrapRequest(originalHttpRequest, agent) {
         // decorate headers
         requestParams.headers = requestParams.headers || {}
 
-        let span = agent.fork(requestParams.path, agent.FORMAT_TEXT_MAP,
+        const span = agent.fork(requestParams.path, agent.FORMAT_TEXT_MAP,
                               requestParams.headers)
         span.setTag('host', requestParams.host || 'localhost')
+        span.setTag('host', requestParams.port || '80')
         span.setTag('protocol', 'http')
 
-        let returned = originalHttpRequest.apply(this, arguments)
+        const returned = originalHttpRequest.apply(this, arguments)
 
         returned.on('error', function () {
             span.setTag('status', 1)

@@ -15,6 +15,7 @@ describe('http.request wrap', () => {
     beforeEach((done) => {
         ns.run(() => {
             records = []
+            agent.setSampler(() => true)
             agent.setRecorder((span) => {
                 records.push(span)
             })
